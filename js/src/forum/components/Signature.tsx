@@ -57,7 +57,7 @@ export default class Signature extends Component<SignatureAttrs> {
   renderSignature() {
     return (
       <div className="Signature-content" onclick={this.edit.bind(this)}>
-        {!this.user.signature() ? <p>{app.translator.trans('signature.forum.profile.click')}</p> : m.trust(this.user.signatureHtml())}
+        {!this.user.signature() ? <p><i class="fa-solid fa-signature" style="color: #74C0FC;"></i>&nbsp;&nbsp;{app.translator.trans('signature.forum.profile.click')}</p> : m.trust(this.user.signatureHtml())}
       </div>
     );
   }
